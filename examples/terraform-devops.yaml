@@ -1,0 +1,20 @@
+name: "terraform-devops"
+packages:
+  - terraform
+  - awscli
+  - azure-cli
+  - git
+  - vscode
+  - kubernetes-cli
+  - helm
+  - terraform-docs
+environment:
+  TF_LOG: "INFO"
+  AWS_REGION: "us-east-1"
+  KUBE_CONFIG_PATH: "C:\\project\\.kube\\config"
+startup_commands:
+  - "terraform --version"
+  - "aws --version"
+  - "az --version"
+  - "kubectl version --client"
+  - "helm version"

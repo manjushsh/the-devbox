@@ -1,0 +1,20 @@
+name: "ai-ml-development"
+packages:
+  - python
+  - anaconda3
+  - git
+  - vscode
+  - cuda
+  - nodejs
+environment:
+  PYTHONPATH: "C:\\project"
+  CUDA_PATH: "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8"
+  JUPYTER_CONFIG_DIR: "C:\\project\\.jupyter"
+startup_commands:
+  - "python --version"
+  - "conda --version"
+  - "pip install --upgrade pip"
+  - "pip install torch torchvision tensorflow-gpu jupyter notebook"
+  - "pip install pandas numpy matplotlib seaborn scikit-learn"
+  - "pip install transformers datasets accelerate"
+  - "nvidia-smi"

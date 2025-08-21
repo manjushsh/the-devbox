@@ -1,0 +1,15 @@
+name: "python-data-science"
+packages:
+  - python
+  - git
+  - vscode
+  - nodejs
+  - anaconda3
+environment:
+  PYTHONPATH: "C:\\project"
+  JUPYTER_CONFIG_DIR: "C:\\project\\.jupyter"
+startup_commands:
+  - "python --version"
+  - "pip install --upgrade pip"
+  - "pip install jupyter pandas numpy matplotlib seaborn scikit-learn"
+  - "jupyter --version"

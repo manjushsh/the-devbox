@@ -1,0 +1,17 @@
+name: "react-development"
+packages:
+  - nodejs
+  - yarn
+  - git
+  - vscode
+  - googlechrome
+environment:
+  NODE_ENV: "development"
+  BROWSER: "chrome"
+  REACT_EDITOR: "code"
+startup_commands:
+  - "node --version"
+  - "npm --version"
+  - "yarn --version"
+  - "npx --version"
+  - "npm install -g create-react-app @vitejs/create-app"

@@ -1,0 +1,14 @@
+name: "docker-development"
+packages:
+  - docker-desktop
+  - docker-compose
+  - git
+  - vscode
+  - kubernetes-cli
+environment:
+  DOCKER_BUILDKIT: "1"
+  COMPOSE_DOCKER_CLI_BUILD: "1"
+startup_commands:
+  - "docker --version"
+  - "docker-compose --version"
+  - "kubectl version --client"

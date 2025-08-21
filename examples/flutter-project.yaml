@@ -1,0 +1,16 @@
+name: "flutter-development"
+packages:
+  - flutter
+  - git
+  - vscode
+  - androidstudio
+  - openjdk11
+environment:
+  FLUTTER_ROOT: "C:\\tools\\flutter"
+  ANDROID_HOME: "C:\\Android\\Sdk"
+  JAVA_HOME: "C:\\Program Files\\OpenJDK\\openjdk-11.0.16_8"
+  PATH: "C:\\tools\\flutter\\bin;C:\\Android\\Sdk\\platform-tools;%PATH%"
+startup_commands:
+  - "flutter --version"
+  - "flutter doctor"
+  - "dart --version"

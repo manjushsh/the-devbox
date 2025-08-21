@@ -1,0 +1,16 @@
+name: "java-development"
+packages:
+  - openjdk17
+  - maven
+  - gradle
+  - git
+  - vscode
+  - intellijidea-community
+environment:
+  JAVA_HOME: "C:\\Program Files\\OpenJDK\\openjdk-17.0.2_8"
+  MAVEN_HOME: "C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.8.6"
+  GRADLE_HOME: "C:\\ProgramData\\chocolatey\\lib\\gradle\\tools\\gradle-7.5.1"
+startup_commands:
+  - "java -version"
+  - "mvn --version"
+  - "gradle --version"

@@ -1,0 +1,14 @@
+name: "game-development"
+packages:
+  - unity-hub
+  - blender
+  - git
+  - vscode
+  - visualstudio2022community
+  - dotnet-sdk
+environment:
+  UNITY_LOG_LEVEL: "Info"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+startup_commands:
+  - "dotnet --version"
+  - "echo 'Unity Hub and Blender installed for game development'"

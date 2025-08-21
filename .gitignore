@@ -1,0 +1,34 @@
+# DevBox generated files
+.devbox/
+*.wsb
+
+# Windows Sandbox temporary files
+%TEMP%/devbox/
+
+# DevBox logs
+devbox.log
+devbox-setup.log
+
+# Test files
+test-config.yaml
+
+# PowerShell files
+*.ps1xml
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,16 @@
+name: "go-development"
+packages:
+  - golang
+  - git
+  - vscode
+  - make
+  - gcc
+environment:
+  GOPATH: "C:\\go"
+  GOROOT: "C:\\ProgramData\\chocolatey\\lib\\golang\\tools\\go"
+  GO111MODULE: "on"
+  GOPROXY: "https://proxy.golang.org,direct"
+startup_commands:
+  - "go version"
+  - "go env"
+  - "mkdir -p C:\\go\\src C:\\go\\bin C:\\go\\pkg"

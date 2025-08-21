@@ -1,0 +1,16 @@
+name: "php-development"
+packages:
+  - php
+  - composer
+  - git
+  - vscode
+  - nodejs
+  - mysql
+  - nginx
+environment:
+  PHP_INI_SCAN_DIR: "C:\\tools\\php\\extras"
+  COMPOSER_HOME: "C:\\composer"
+startup_commands:
+  - "php --version"
+  - "composer --version"
+  - "composer global require laravel/installer"

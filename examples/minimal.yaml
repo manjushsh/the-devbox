@@ -1,0 +1,8 @@
+name: "minimal-dev"
+packages:
+  - git
+  - vscode
+environment:
+  EDITOR: "code"
+startup_commands:
+  - "git --version"

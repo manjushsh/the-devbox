@@ -1,0 +1,17 @@
+name: "blockchain-development"
+packages:
+  - nodejs
+  - git
+  - vscode
+  - python
+  - ganache
+environment:
+  NODE_ENV: "development"
+  INFURA_PROJECT_ID: ""
+  PRIVATE_KEY: ""
+startup_commands:
+  - "node --version"
+  - "npm --version"
+  - "npm install -g @truffle/truffle @ganache/cli hardhat"
+  - "npm install -g @openzeppelin/cli web3"
+  - "python --version"

@@ -1,0 +1,24 @@
+# DevBox Configuration File
+# This file defines the development environment for your project
+
+# Required: Name of your development environment
+name: "example-devbox"
+
+# Optional: List of packages to install via Chocolatey
+# Common packages: git, nodejs, python, vscode, docker-desktop, etc.
+packages:
+  - git
+  - nodejs
+  - python
+  - vscode
+
+# Optional: Environment variables to set in the sandbox
+environment:
+  NODE_ENV: "development"
+  PYTHON_PATH: "C:\\Python\\Scripts"
+
+# Optional: Commands to run after setup is complete
+startup_commands:
+  - "git --version"
+  - "node --version"
+  - "python --version"

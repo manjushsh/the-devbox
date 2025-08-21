@@ -1,0 +1,15 @@
+# DevBox Configuration for Testing
+name: "devbox-test"
+
+packages:
+  - git
+  - nodejs
+  - vscode
+
+environment:
+  NODE_ENV: "development"
+  TEST_MODE: "true"
+
+startup_commands:
+  - "git --version"
+  - "node --version"

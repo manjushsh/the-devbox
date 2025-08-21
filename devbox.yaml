@@ -1,0 +1,17 @@
+name: "rust-development"
+packages:
+  - rust
+  - git
+  - vscode
+  - cmake
+  - llvm
+  - mingw
+environment:
+  CARGO_HOME: "C:\\cargo"
+  RUSTUP_HOME: "C:\\rustup"
+  PATH: "C:\\cargo\\bin;%PATH%"
+startup_commands:
+  - "rustc --version"
+  - "cargo --version"
+  - "rustup --version"
+  - "cargo install cargo-edit cargo-watch"

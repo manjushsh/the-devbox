@@ -1,0 +1,17 @@
+name: "ruby-development"
+packages:
+  - ruby
+  - git
+  - vscode
+  - sqlite
+  - nodejs
+  - msys2
+environment:
+  GEM_HOME: "C:\\ruby\\gems"
+  GEM_PATH: "C:\\ruby\\gems"
+  BUNDLE_PATH: "C:\\ruby\\gems"
+startup_commands:
+  - "ruby --version"
+  - "gem --version"
+  - "bundler --version"
+  - "gem install rails bundler"

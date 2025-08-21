@@ -1,0 +1,14 @@
+name: "dotnet-development"
+packages:
+  - dotnet-sdk
+  - git
+  - vscode
+  - nodejs
+  - nuget.commandline
+environment:
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "1"
+  NUGET_XMLDOC_MODE: "skip"
+startup_commands:
+  - "dotnet --version"
+  - "dotnet --info"
