@@ -13,3 +13,9 @@ environment:
 startup_commands:
   - "git --version"
   - "node --version"
+
+sandbox:
+  memory_mb: 6144
+  vgpu: "Default"
+  networking: "Default"
+  clipboard_redirection: true

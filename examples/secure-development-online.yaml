@@ -1,21 +1,16 @@
-# DevBox Configuration for Testing
-name: "devbox-test"
-
+name: "secure-development-online"
 packages:
   - git
-  - nodejs
   - vscode
-
+  - notepadplusplus
 environment:
-  NODE_ENV: "development"
-  TEST_MODE: "true"
-
+  SECURITY_MODE: "high"
+  DEVELOPMENT_MODE: "secure"
 startup_commands:
   - "git --version"
-  - "node --version"
-
+  - "code --version"
 sandbox:
-  memory_mb: 6144
+  memory_mb: 8192
   vgpu: "Default"
   networking: "Default"
   audio_input: false

@@ -32,6 +32,11 @@ This folder contains example `devbox.yaml` configurations for different developm
 - **`blockchain-project.yaml`** - Blockchain development with Truffle and Hardhat
 - **`minimal.yaml`** - Minimal environment (Git + VS Code only)
 
+### Security & Isolation Examples
+- **`secure-development.yaml`** - High-security isolated environment with network disabled
+- **`isolated-research.yaml`** - Research environment with no network access
+- **`gaming-development.yaml`** - High-performance gaming development with GPU enabled
+
 ## Usage Examples
 
 ### Quick Start with React
@@ -60,6 +65,35 @@ Feel free to modify any example by:
 - Setting custom environment variables
 - Adding startup commands for project-specific setup
 - Changing the environment name
+- **Configuring sandbox security and performance settings**
+
+### Sandbox Configuration Examples
+[Windows Sandbox Configuration Guide](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+
+```yaml
+# High-performance development (16GB RAM, GPU enabled)
+sandbox:
+  memory_mb: 16384
+  vgpu: "Enable"
+  networking: "Default"
+  clipboard_redirection: true
+
+# Secure isolated environment (no network, enhanced security)
+sandbox:
+  memory_mb: 8192
+  vgpu: "Disable"
+  networking: "Disable"
+  audio_input: false
+  video_input: false
+  clipboard_redirection: false
+  protected_client: true
+
+# Lightweight environment (4GB RAM, minimal access)
+sandbox:
+  memory_mb: 4096
+  vgpu: "Default"
+  networking: "Default"
+```
 
 ## Package Names
 

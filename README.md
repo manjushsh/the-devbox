@@ -91,6 +91,17 @@ startup_commands:
   - "git config --global user.name 'Developer'"
   - "npm install -g yarn"
   - "echo 'Environment ready!'"
+
+# Optional: Windows Sandbox configuration
+sandbox:
+  memory_mb: 8192                    # RAM allocation in MB
+  vgpu: "Enable"                     # GPU virtualization: Default, Enable, Disable
+  networking: "Default"              # Network access: Default, Disable
+  audio_input: false                 # Enable microphone access
+  video_input: false                 # Enable camera access
+  printer_redirection: false         # Enable printer access
+  clipboard_redirection: true        # Enable clipboard sharing
+  protected_client: false            # Enhanced security mode
 ```
 
 ### Configuration Options
@@ -98,6 +109,23 @@ startup_commands:
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `name` | string | Yes | Name of your development environment |
+| `packages` | array | No | List of Chocolatey packages to install |
+| `environment` | object | No | Environment variables to set |
+| `startup_commands` | array | No | Commands to run after setup completion |
+| `sandbox` | object | No | Windows Sandbox configuration options |
+
+#### Sandbox Configuration Options
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `memory_mb` | integer | 4096 | RAM allocation in megabytes |
+| `vgpu` | string | "Default" | GPU virtualization: `Default`, `Enable`, `Disable` |
+| `networking` | string | "Default" | Network access: `Default`, `Disable` |
+| `audio_input` | boolean | false | Enable microphone access in sandbox |
+| `video_input` | boolean | false | Enable camera access in sandbox |
+| `printer_redirection` | boolean | false | Enable printer access from sandbox |
+| `clipboard_redirection` | boolean | true | Enable clipboard sharing with host |
+| `protected_client` | boolean | false | Enhanced security mode (limits host access) |
 | `packages` | array | No | List of Chocolatey packages to install |
 | `environment` | object | No | Environment variables to set |
 | `startup_commands` | array | No | Commands to run after setup completion |

@@ -1,0 +1,18 @@
+name: "isolated-research"
+packages: []  # No packages - network disabled for isolation
+environment:
+  RESEARCH_MODE: "isolated"
+  OFFLINE_MODE: "true"
+startup_commands:
+  - "echo 'Isolated research environment ready'"
+  - "echo 'Project files available in C:\\project'"
+  - "echo 'Use built-in Windows tools for analysis'"
+sandbox:
+  memory_mb: 12288
+  vgpu: "Default"
+  networking: "Disable"
+  audio_input: false
+  video_input: false
+  printer_redirection: false
+  clipboard_redirection: false
+  protected_client: true

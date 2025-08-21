@@ -1,0 +1,17 @@
+name: "secure-development"
+packages: []  # No packages - network disabled for security
+environment:
+  SECURITY_MODE: "high"
+  OFFLINE_MODE: "true"
+startup_commands:
+  - "echo 'Secure isolated environment ready'"
+  - "echo 'Available tools: PowerShell, CMD, Notepad, built-in Windows utilities'"
+sandbox:
+  memory_mb: 8192
+  vgpu: "Disable"
+  networking: "Disable"
+  audio_input: false
+  video_input: false
+  printer_redirection: false
+  clipboard_redirection: false
+  protected_client: true

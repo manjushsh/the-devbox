@@ -44,8 +44,25 @@ if ($Action -eq "clean") {
 }
 
 if ($Action -eq "generate") {
-    Write-Host "Generating devbox.yaml..." -ForegroundColor Yellow
-    $yaml = 'name: "my-project"' + "`n" + 'packages:' + "`n" + '  - git' + "`n" + '  - vscode'
-    $yaml | Out-File "devbox.yaml" -Encoding UTF8
-    Write-Host "✓ devbox.yaml created" -ForegroundColor Green
+    Write-Host "Generating devbox.yaml with sandbox configuration..." -ForegroundColor Yellow
+    
+    $yamlContent = @(
+        'name: "my-project"',
+        'packages:',
+        '  - git',
+        '  - vscode',
+        'environment:',
+        '  EDITOR: "code"',
+        'startup_commands:',
+        '  - "git --version"',
+        'sandbox:',
+        '  memory_mb: 6144',
+        '  vgpu: "Default"',
+        '  networking: "Default"',
+        '  clipboard_redirection: true'
+    )
+    
+    $yamlContent | Out-File "devbox.yaml" -Encoding UTF8
+    Write-Host "✓ devbox.yaml created with sandbox configuration" -ForegroundColor Green
+    Write-Host "  Memory: 6GB, GPU: Default, Network: Enabled" -ForegroundColor Cyan
 }

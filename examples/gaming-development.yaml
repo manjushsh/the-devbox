@@ -1,0 +1,20 @@
+name: "gaming-development"
+packages:
+  - unity-hub
+  - blender
+  - git
+  - vscode
+  - visualstudio2022community
+environment:
+  UNITY_LOG_LEVEL: "Info"
+startup_commands:
+  - "echo 'Game development environment ready'"
+sandbox:
+  memory_mb: 16384
+  vgpu: "Enable"
+  networking: "Default"
+  audio_input: true
+  video_input: true
+  printer_redirection: false
+  clipboard_redirection: true
+  protected_client: false
