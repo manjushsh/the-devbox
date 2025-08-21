@@ -13,7 +13,7 @@ A command-line tool for creating isolated development environments on Windows us
 
 ## Prerequisites
 
-### Windows Sandbox
+### Windows Sandbox - ([Available only on Windows 10/11 Pro, Enterprise, and Education](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/))
 Windows Sandbox must be enabled on your system. To enable it:
 
 1. **Via GUI**: Open "Turn Windows features on or off" and check "Windows Sandbox"
